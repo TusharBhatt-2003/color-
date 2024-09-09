@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+body {
+    background: #fffbeb;
+    margin: 0;
+    padding: 0;
+    height: 100dvh;
+}
+
+main {
+    margin: 1rem;
+    padding: 0;
+    gap: 1rem;
+    display: grid;
+    grid-template-areas: 
+    'Narvik Eagle'
+    'Erie-Black Fire-Bush'
+    'Jaffa Sorbus';
+    width: auto;
+    height: 100vh;
+    grid-auto-columns: 1fr;
+
+    & > div {
+        padding: 0em 1rem;
+        border-radius: .5rem;
+        /* border: solid 2px rgba(255, 255, 255, 0.747); */
+        box-shadow: 1px 1px 5px rgb(149, 149, 149);
+
+        & > h2 {
+           font-size: 2rem;
+            font-family: "Bowlby One", sans-serif;
+            font-weight: 100;
+            margin: 0;
+        }
+        & > p {
+            font-family: "Titillium Web", sans-serif;
+            font-size: .7rem;
+            margin: 0;
+            padding: 0;
+            line-height: 1rem;
+        }
+    } 
+}
+
+.color-box1 {
+    grid-area: Narvik;
+    background-color: #e7e7d8;
+}
+.color-box2 {
+    grid-area: Eagle;
+    background-color: #AEAC95;
+}
+.color-box3 {
+    grid-area: Erie-Black;
+    background-color: #1E1E1D;
+    color: white;
+}
+.color-box4 {
+    grid-area: Fire-Bush;
+    background-color: #F09235;
+}
+.color-box5 {
+    grid-area: Jaffa;
+    background-color: #ED762F;
+    color: white;
+}
+.color-box6 {
+    grid-area: Sorbus;
+    background-color: #EC642B;
+    color: white;
+}
+
+@media screen and (min-width: 40em) {
+    main {
+        grid-template-areas:
+        'Narvik  Eagle Fire-Bush'
+    'Erie-Black Erie-Black Jaffa'
+    'Erie-Black Erie-Black Sorbus';
+    }
+}
+
+@media screen and (min-width: 65em) {
+    main {
+        grid-template-areas:
+      'Narvik Narvik Eagle'
+    'Erie-Black Erie-Black Fire-Bush'
+    'Erie-Black Erie-Black Jaffa'
+    'Erie-Black Erie-Black Sorbus';
+     }
+}
